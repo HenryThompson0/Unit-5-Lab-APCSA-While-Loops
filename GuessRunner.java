@@ -9,7 +9,18 @@ public class GuessRunner
 {
 	public static void main(String args[])
 	{
-		Scanner keyboard = new Scanner(System.in);
-		char response;
+        char response;
+        Scanner keyboard = new Scanner(System.in);
+
+        do
+        {
+            System.out.print("How many numbers? ");
+            int range = keyboard.nextInt();
+            GuessingGame n = new GuessingGame(range);
+
+            System.out.print("Do you want to play again? ");
+            response = keyboard.next().toLowerCase().charAt(0);
+
+        }while(response == 'y');
 	}
 }
