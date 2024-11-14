@@ -7,7 +7,7 @@ import static java.lang.System.*;
 
 public class GuessingGame
 {
-	private int upperBound;
+    private int upperBound;
     private int compChoice;
     private int playChoice;
     private double numGuesses;
@@ -31,8 +31,16 @@ public class GuessingGame
             {
                 System.out.println("That number is out of range! ");
             }
+            if (playChoice<compChoice)
+            {
+                System.out.println("The number is higher than "+playChoice);
+            }
+            if (playChoice>compChoice)
+            {
+                System.out.println("The number is lower than "+playChoice);
+            }
             numGuesses += 1;
-
+            
         } while (playChoice != compChoice);
         
         percent = ((numGuesses-1)/numGuesses)*100;
