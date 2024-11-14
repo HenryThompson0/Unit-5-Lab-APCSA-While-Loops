@@ -22,5 +22,7 @@ public class GuessRunner
             response = keyboard.next().toLowerCase().charAt(0);
 
         }while(response == 'y');
+
+        keyboard.close();
 	}
 }
